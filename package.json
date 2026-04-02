@@ -1,0 +1,18 @@
+{
+  "name": "@pipeworx/mcp-crossref",
+  "version": "1.0.0",
+  "description": "MCP server for searching academic papers, journals, and citations via the Crossref API",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": ["src"],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "crossref", "academic", "papers", "doi"],
+  "author": "Pipeworx <hello@pipeworx.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
