@@ -1,32 +1,54 @@
 # mcp-crossref
 
-MCP server for searching academic papers, journals, and citations via the [Crossref API](https://api.crossref.org). No authentication required.
+Crossref MCP — wraps the Crossref REST API (academic papers, free, no auth)
+
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `search_works` | Search academic works (papers, books, datasets) by keyword |
-| `get_work` | Get full metadata for a specific work by DOI |
-| `get_journal` | Get the 5 most recent works published in a journal by ISSN |
 
-## Quickstart via Pipeworx Gateway
+## Quick Start
 
-Call any tool through the hosted gateway with zero setup:
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 
-```bash
-curl -X POST https://gateway.pipeworx.io/mcp \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "tools/call",
-    "params": {
-      "name": "crossref_search_works",
-      "arguments": { "query": "machine learning climate change" }
+```json
+{
+  "mcpServers": {
+    "crossref": {
+      "url": "https://gateway.pipeworx.io/crossref/mcp"
     }
-  }'
+  }
+}
 ```
+
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
+
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
+```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Crossref data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
