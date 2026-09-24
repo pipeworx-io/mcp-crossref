@@ -1,18 +1,32 @@
 {
   "name": "@pipeworx/mcp-crossref",
-  "version": "1.0.0",
-  "description": "MCP server for searching academic papers, journals, and citations via the Crossref API",
+  "version": "1.0.1",
+  "description": "Crossref MCP — wraps the Crossref REST API (academic papers, free, no auth)",
+  "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
-  "files": ["src"],
+  "bin": {
+    "mcp-crossref": "bin/cli.js"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "crossref"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipeworx-io/mcp-crossref.git"
+  },
   "scripts": {
-    "build": "tsc",
     "typecheck": "tsc --noEmit"
   },
-  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "crossref", "academic", "papers", "doi"],
-  "author": "Pipeworx <hello@pipeworx.io>",
-  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-12c7268de696c268169bd9e1c341492c061117a9501f9d4c7a3da8cd375d5116",
+    "sourceCommit": "60f04b68c347e970c6be94a53439d1364061fc06"
   }
 }
