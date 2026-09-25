@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-crossref",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Crossref MCP — wraps the Crossref REST API (academic papers, free, no auth)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-12c7268de696c268169bd9e1c341492c061117a9501f9d4c7a3da8cd375d5116",
-    "sourceCommit": "60f04b68c347e970c6be94a53439d1364061fc06"
+    "sourceHash": "v1-b2d2f5a549e5c4f7eb5f527fca99436c20876cbd3b16d47273288b7a6b1f3da2",
+    "sourceCommit": "5b29c2b0c11e1fcd954969a245b474e6e9475116"
   }
 }
