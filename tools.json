@@ -1,6 +1,6 @@
 [
   {
-    "name": "search_works",
+    "name": "crossref_search_works",
     "description": "Search academic papers, books, and datasets via Crossref. For \"search works titled X\" / finding a SPECIFIC paper by its title, pass `title` (title-scoped — ranks the exact paper first). Beyond keyword search you can SORT by citation count or publication date and FILTER by date range, work type, author, and JOURNAL (`journal` = a journal name like \"Progress in Materials Science\" or an ISSN; results are restricted to that journal only) — e.g. \"most-cited papers on transformers\" (sort=citations), \"papers on LLMs since 2024\" (from_date=2024-01-01), \"recent journal articles by an author\". Returns titles, authors, journal, DOIs, citation counts, and dates.",
     "inputSchema": {
       "type": "object",
@@ -67,7 +67,7 @@
     }
   },
   {
-    "name": "get_journal",
+    "name": "crossref_get_journal",
     "description": "Get the 5 most recent works from a journal by ISSN (e.g., \"2041-1723\"). Returns titles, authors, DOIs, and publication dates.",
     "inputSchema": {
       "type": "object",
